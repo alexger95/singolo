@@ -248,6 +248,13 @@ div.servicesList div img {
     border-radius: 5px;
 }
 
+.tags li:hover {
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+    transition: .2s;
+    opacity: 1;
+}
+
 .projects {
     height: 660px;
     padding: 7px 40px;
@@ -299,6 +306,11 @@ div.servicesList div img {
 .socialbtn li {
     margin-right: 8px;
     list-style: none;
+}
+
+.socialbtn li:hover {
+    transition: .2s;
+    opacity: 0.4;
 }
 
 .portretbox {
@@ -394,7 +406,8 @@ textarea::placeholder {
     color: #e87675;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     padding-left: 15px;
 }
 
@@ -402,8 +415,18 @@ input {
     height: 38px;
 }
 
+input:hover {
+    background-color: #2d303a;
+    transition: 0.4s;
+}
+
 textarea {
     height: 202px;
+}
+
+textarea:hover {
+    background-color: #2d303a;
+    transition: 0.4s;
 }
 
 .formobj {

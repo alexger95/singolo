@@ -18,7 +18,7 @@ body {
     font-family: lato-black;
 }
 
-.header {
+.portfolio {
     height: 190px;
     color: #53596f;
     background-color: #2d303a;
@@ -28,22 +28,22 @@ body {
     margin: 0 40px;
 }
 
-.logo {
+.project-title {
     padding-top: 60px;
 }
 
-.logo p {
+.project-title p {
     margin-top: 25px;
     font-size: 15px;
 }
 
-ul {
+.tags ul {
     margin-top: 20px;
     padding-inline-start: 0;
     display: flex;
 }
 
-.nav li {
+.tags li {
     font-family: Lato, sans-serif;
     font-size: 10px;
     margin-right: 10px;

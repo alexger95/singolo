@@ -187,6 +187,19 @@ body {
     flex-wrap: wrap;
 }
 
+.servicesList-element {
+    max-height: 110px;
+    overflow: hidden;
+}
+
+.fix {
+    margin-left: 16px;
+}
+
+.fix2 {
+    margin-left: 12px;
+}
+
 .servicesList div {
     display: flex;
     margin-bottom: 11px;
@@ -286,6 +299,8 @@ div.servicesList div img {
     margin-bottom: auto;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-height: 620px;
+    overflow: hidden;
 }
 
 .projectimg {
@@ -461,6 +476,11 @@ textarea:hover {
     cursor: pointer;
     color: #f48c8f;
     background-color: #d6564f;
+}
+
+.form-button:hover {
+    background-color: #2d303a;
+    transition: 0.4s;
 }
 
 .contact {

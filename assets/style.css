@@ -1,6 +1,25 @@
 @font-face {
-    font-family: lato-black;
-    src: url(assets/lato-black.ttf);
+    font-family: "Lato";
+    src: local("Lato Black"), local("Lato-Black"), url("../assets/fonts/Lato-Black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato Bold"), local("Lato-Bold"), url("../assets/fonts/Lato-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato Regular"), local("Lato-Regular"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: local("Lato Light"), local("Lato-Light"), url("../assets/fonts/Lato-Light.ttf") format("truetype");
+    font-weight: 300;
 }
 
 h1,
@@ -11,7 +30,7 @@ h4 {
 }
 
 body {
-    font-family: lato-black, sans-serif;
+    font-family: "Lato", Verdana, sans-serif;
     max-width: 1020px;
     margin: 0 auto;
     background-color: #f2f2f2;
@@ -91,7 +110,7 @@ body {
 
 .nav {
     display: inline-block;
-    margin-top: 9px;
+    margin-top: 4px;
 }
 
 .navBot {
@@ -143,13 +162,13 @@ body {
 
 .ourServices {
     padding: 40px;
-    padding-top: 57px;
+    padding-top: 58px;
     padding-bottom: 25px;
 }
 
 .ourServices h2 {
-    font-family: lato, sans-serif;
-    font-size: 31px;
+    font-weight: 900;
+    font-size: 30px;
     color: #666d89;
 }
 
@@ -170,7 +189,7 @@ body {
 
 .servicesList div {
     display: flex;
-    margin-bottom: 18px;
+    margin-bottom: 11px;
     padding: 0 5px;
     flex: 1 300px;
 }
@@ -192,12 +211,12 @@ body {
 }
 
 .servicedescription h3 {
-    font-family: lato, sans-serif;
+    font-weight: 900;
     font-size: 18px;
 }
 
 .servicedescription p {
-    font-family: lato, sans-serif;
+    line-height: 19px;
     font-size: 12px;
 }
 
@@ -239,7 +258,6 @@ div.servicesList div img {
 }
 
 .tags li {
-    font-family: Lato, sans-serif;
     font-size: 11px;
     margin-right: 23px;
     padding: 3px;
@@ -279,7 +297,7 @@ div.servicesList div img {
 
 .about-us {
     margin: 0 40px;
-    margin-top: 63px;
+    margin-top: 66px;
     margin-bottom: 70px;
     color: #666d89;
 }
@@ -326,7 +344,7 @@ div.servicesList div img {
     font-size: 10px;
     line-height: 22px;
     margin-top: 7px;
-    margin-bottom: 19px;
+    margin-bottom: 22px;
 }
 
 .socialbtn {
@@ -433,6 +451,18 @@ textarea:hover {
     max-width: 620px;
 }
 
+.form-button {
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 400;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #f48c8f;
+    background-color: #d6564f;
+}
+
 .contact {
     max-width: 300px;
 }
@@ -465,7 +495,6 @@ textarea:hover {
 }
 
 .socialbtn li {
-    margin-right: 6px;
     list-style: none;
 }
 

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>Singolo</title>
     <link href="assets/style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-    <div class="header">
+    <div id="home" class="header">
         <div class="logo">
             <h1>SINGOLO</h1>
             <div class="logoElement">
@@ -16,24 +17,55 @@
             </div>
         </div>
         <div class="nav">
-            <ul>
-                <li><a class="active">Home</a></li>
-                <li class="big"><a>Services</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
+            <ul id="header-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#aboutus">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
-    <div class="navBot"></div>
-    <div class="slider">
-        <div class="btnLeft"><img src="assets/img/left.png" alt="left"></div>
-        <div class="slideimg"><img src="assets/img/phonex2.png" alt="sliderimg"></div>
-        <div class="btnRight"><img src="assets/img/right.png" alt="right"></div>
+    <div id="home" class="home">
+        <div class="carusel">
+            <div class="item-comtainer">
+                <div class="item active">
+                    <div class="description">
+
+                        <img class="iphone--vertical-shadow" src="./assets/img/slider/phone-vertical-shadow.png" alt="first_img">
+                        <img class="iphone--horizontal-shadow" src="./assets/img/slider/phone-horizontal-shadow.png" alt="last_img">
+                        <img class="iphone--vertical" src="./assets/img/slider/phone-vertical.png" alt="first_img">
+                        <img class="iphone--horizontal" src="./assets/img/slider/phone-horizontal.png" alt="last_img">
+                        <img class="iphone--vertical-display" src="./assets/img/slider/phone-vertical-display.png" alt="first_img">
+                        <img class="iphone--horizontal-display" src="./assets/img/slider/phone-horizontal-display.png" alt="last_img">
+
+                    </div>
+                </div>
+                <div class="item blue">
+                    <div class="description">
+
+                        <img class="iphone--left" src="./assets/img/slider/slidercont1.png" alt="left phone">
+                        <img class="iphone--center" src="./assets/img/slider/slidercont.png" alt="center phone">
+                        <img class="iphone--right" src="./assets/img/slider/slidercont2.png" alt="right phone">
+
+                    </div>
+                </div>
+            </div>
+            <div class="control left">
+                <div class="arrow left"><img src="assets/img/left.png" alt="left"></div>
+            </div>
+            <div class="control right">
+                <div class="arrow right"><img src="assets/img/right.png" alt="right"></div>
+            </div>
+        </div>
     </div>
+
+
+
     <div class="sliderBot">
     </div>
-    <div class="services">
+    </div>
+    <div id="services" class="services">
         <div class="ourServices">
             <h2>Our Services</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -86,69 +118,69 @@
         </div>
     </div>
 
-    <div class="portfolio">
+    <div id="portfolio" class="portfolio">
         <div class="container">
             <div class="project-title">
                 <h1>Portfolio</h1>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             </div>
-            <div class="tags">
+            <div id="tags" class="tags">
                 <ul>
-                    <li><a class="active">All</a></li>
-                    <li class="big"><a>Web Design</a></li>
-                    <li><a>Graphic Design</a></li>
-                    <li><a>Artwork</a></li>
+                    <li class="active"><a>All</a></li>
+                    <li id="webdesign"><a>Web Design</a></li>
+                    <li id="graphicdesign"><a>Graphic Design</a></li>
+                    <li id="artwork"><a>Artwork</a></li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <div class="projects">
-        <div class="projectslist">
-            <div class="projectimg">
-                <img src="assets/img/projects/project1.jpg" alt="Projects1">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project2.jpg" alt="Projects2">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project3.jpg" alt="Projects3">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project4.jpg" alt="Projects4">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project5.jpg" alt="Projects5">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project6.jpg" alt="Projects6">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project7.jpg" alt="Projects7">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project8.jpg" alt="Projects8">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project9.jpg" alt="Projects9">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project10.jpg" alt="Projects10">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project11.jpg" alt="Projects11">
-            </div>
-            <div class="projectimg">
-                <img src="assets/img/projects/project12.jpg" alt="Projects12">
-            </div>
 
+        <div class="projects">
+            <div id="projectslist" class="projectslist">
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project1.jpg" alt="Projects1">
+                </div>
+                <div id="webdesign" class="projectimg">
+                    <img src="assets/img/projects/project2.jpg" alt="Projects2">
+                </div>
+                <div id="webdesign" class="projectimg">
+                    <img src="assets/img/projects/project3.jpg" alt="Projects3">
+                </div>
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project4.jpg" alt="Projects4">
+                </div>
+                <div id="graphicdesign" class="projectimg">
+                    <img src="assets/img/projects/project5.jpg" alt="Projects5">
+                </div>
+                <div id="graphicdesign" class="projectimg">
+                    <img src="assets/img/projects/project6.jpg" alt="Projects6">
+                </div>
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project7.jpg" alt="Projects7">
+                </div>
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project8.jpg" alt="Projects8">
+                </div>
+                <div id="graphicdesign" class="projectimg">
+                    <img src="assets/img/projects/project9.jpg" alt="Projects9">
+                </div>
+                <div id="graphicdesign" class="projectimg">
+                    <img src="assets/img/projects/project10.jpg" alt="Projects10">
+                </div>
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project11.jpg" alt="Projects11">
+                </div>
+                <div id="artwork" class="projectimg">
+                    <img src="assets/img/projects/project12.jpg" alt="Projects12">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="projectsBot">
         </div>
     </div>
-
-    <div class="projectsBot">
-    </div>
-
-    <div class="about-us">
+    <div id="aboutus" class="about-us">
         <h2>About Us</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="portrets">
@@ -210,66 +242,78 @@
                 </ul>
             </div>
         </div>
+        <div class="about__bot">
+        </div>
     </div>
 
-    <div class="about__bot">
-    </div>
-    <footer>
-        <div class="futerbox">
-            <div class="top">
-                <h2>Geta Quote</h2>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            </div>
-            <div class="form">
-                <div class="formobj">
-                    <form>
-                        <input type="text" name="name" placeholder="Name (Required)">
-                        <input type="email" name="email" placeholder="Email (Required)">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="description" placeholder="Descibe your project in detail..."></textarea>
-                        <button class="form-button" type="submit">Submit</button>
-                    </form>
-                </div>
-                <div class="contact">
-                    <h3>Contact Information</h3>
-                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-                    <div class="contactlist">
-                        <ul>
-                            <li>
-                                <img src="./assets/img/contacts/gps.png" alt='address'><a href="map: #">Elm St. 14/05 Lost City</a>
-                            </li>
-                            <li>
-                                <img src="./assets/img/contacts/phone.png" alt="phone number"><a href="tel: #">03528 331 86 35 </a>
-                            </li>
-                            <li>
-                                <img src="./assets/img/contacts/mail.png" alt="email"><a href="mailto: #">info@singolo.com</a>
-                            </li>
-                        </ul>
+
+
+    <div id="contact" class="footerbox">
+        <div class="top">
+            <h2>Geta Quote</h2>
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+        <div class="form">
+            <div class="formobj">
+                <form class="form" action="#" method="POST">
+                    <input id="formname" class="formname" type="text" name="name" required placeholder="Name (Required)">
+                    <input id="formemail" class="formemail" type="email" name="email" required placeholder="Email (Required)">
+                    <input id="subject" type="text" name="subject" placeholder="Subject">
+                    <textarea id="describe" name="description" placeholder="Descibe your project in detail..."></textarea>
+                    <button id="btn" class="form-button" name="submit" type="submit">send</button>
+                </form>
+                <div id="message-block" class="hidden">
+                    <div id="message">
+                        <p>Письмо отправлено</p>
+                        <p id="subjectout"></p>
+                        <p id="describeout"></p>
+                        <br>
+                        <button id="close-btn">OK</button>
                     </div>
                 </div>
             </div>
-            <div class="bottom">
-                <h4>©Copyright2013</h4>
-                <div class="social">
-                    <ul class="socialbtn">
-                        <li class="facebook">
-                            <a href="#"><img src="assets/img/social/facebook.png"></a>
+            <div class="contact">
+                <h3>Contact Information</h3>
+                <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                <div class="contactlist">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/contacts/gps.png" alt='address'><a href="map: #">Elm St. 14/05 Lost City</a>
                         </li>
-                        <li class="google">
-                            <a href="#"><img src="assets/img/social/google.png"></a>
+                        <li>
+                            <img src="./assets/img/contacts/phone.png" alt="phone number"><a href="tel: #">03528 331 86 35 </a>
                         </li>
-                        <li class="twitter">
-                            <a href="#"><img src="assets/img/social/twitter.png"></a>
-                        </li>
-                        <li class="linkedin">
-                            <a href="#"><img src="assets/img/social/linkedin.png"></a>
+                        <li>
+                            <img src="./assets/img/contacts/mail.png" alt="email"><a href="mailto: #">info@singolo.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="bottom">
+            <h4>©Copyright2013</h4>
+            <div class="social">
+                <ul class="socialbtn">
+                    <li class="facebook">
+                        <a href="#"><img src="assets/img/social/facebook.png"></a>
+                    </li>
+                    <li class="google">
+                        <a href="#"><img src="assets/img/social/google.png"></a>
+                    </li>
+                    <li class="twitter">
+                        <a href="#"><img src="assets/img/social/twitter.png"></a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="#"><img src="assets/img/social/linkedin.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

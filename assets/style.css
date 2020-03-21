@@ -33,6 +33,14 @@ h4 {
     margin: 0;
 }
 
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: "Lato", Verdana, sans-serif;
     max-width: 1020px;
@@ -239,6 +247,7 @@ body {
 .description {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .project-name {
@@ -249,7 +258,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 15%;
+    width: 7%;
     cursor: pointer;
 }
 
@@ -266,7 +275,7 @@ body {
 .arrow {
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     font-size: 84px;
 }

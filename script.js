@@ -1,3 +1,4 @@
+/*menu selected*/
 const MENU = document.getElementById('header-menu');
 
 MENU.addEventListener('click', (event) => {
@@ -59,7 +60,7 @@ document.querySelector('.control.right').addEventListener('click', function() {
     }
 });
 
-/*black*/
+/*black display*/
 const hDisplay = document.querySelector('.iphone--horizontal-display');
 const vDisplay = document.querySelector('.iphone--vertical-display');
 document.querySelector('.iphone--vertical').addEventListener('click', (event) => {
@@ -106,21 +107,32 @@ TAGS.addEventListener('click', (event) => {
 
 
     })
-    console.log(PROJECTSLIST);
     PROJECTSLIST.innerHTML = swap.join('');
 
-
+    TAGS.querySelectorAll('li').forEach(element => element.classList.remove('active'));
+    if (event.target.tagName == 'LI') {
+        event.target.classList.add('active');
+    }
+    if (event.target.tagName == 'A') {
+        event.target.parentNode.classList.add('active');
+    }
+    console.log(event);
 
 });
 
 
-
+/*project select*/
 
 PROJECTSLIST.addEventListener('click', (event) => {
 
     PROJECTSLIST.querySelectorAll('img').forEach(element => element.parentNode.classList.remove('border'));
     event.target.parentNode.classList.add('border');
 });
+
+/*tag selected*/
+
+
+/*form*/
 
 const FORM = document.querySelector('form');
 const CLOSEBUTTON = document.getElementById('close-btn');
@@ -149,6 +161,7 @@ FORM.addEventListener('submit', (event) => {
 });
 
 CLOSEBUTTON.addEventListener('click', () => {
+    document.querySelector('form').reset();
     document.getElementById('message-block').classList.add('hidden');
 });
 
@@ -166,7 +179,7 @@ function onscroll(event) {
 
         el.getAttribute('id');
 
-        if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+        if (el.offsetTop - 95 <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
             links.forEach((a) => {
                 a.classList.remove('active');
                 if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {

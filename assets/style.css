@@ -24,6 +24,8 @@
 
 html {
     scroll-behavior: smooth;
+    --top-spacing: 95px;
+    scroll-padding-top: var(--top-spacing);
 }
 
 h1,
@@ -109,6 +111,10 @@ body {
     font-family: lato;
     font-size: 12px;
     color: #fff;
+}
+
+.nav li:first-child {
+    list-style-type: none;
 }
 
 .nav li a:hover {
@@ -233,8 +239,8 @@ body {
 
 /**/
 
-.active,
-.next {
+div.active,
+div.next {
     display: block;
 }
 
@@ -528,6 +534,7 @@ div.servicesList div img {
     border: 1px solid #c5c5c5;
     transition: .2s;
     opacity: 1;
+    cursor: ;
 }
 
 .tags li.active {
@@ -615,7 +622,9 @@ div.servicesList div img {
     margin-bottom: 15px;
 }
 
-.portfolio::before,
+
+/*шапка 
+/* .portfolio::before,
 .services::before,
 .about-us::before,
 .futerbox::before {
@@ -623,7 +632,7 @@ div.servicesList div img {
     content: "";
     height: 55px;
     margin: -55px 0 0;
-}
+} */
 
 
 /*footer*/

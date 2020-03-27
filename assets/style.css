@@ -22,10 +22,15 @@
     font-weight: 300;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     --top-spacing: 95px;
     scroll-padding-top: var(--top-spacing);
+    font-size: 10px;
 }
 
 h1,
@@ -58,7 +63,7 @@ body {
     top: 0px;
     z-index: 2;
     display: flex;
-    height: 89px;
+    height: 95px;
     color: #fff;
     background-color: #2d303a;
     align-items: center;
@@ -72,6 +77,7 @@ body {
     font-weight: bold;
     display: flex;
     margin: 0 40px;
+    z-index: 10;
 }
 
 .logo h1 {
@@ -132,8 +138,113 @@ body {
 
 .nav {
     display: inline-block;
-    margin-top: 4px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+
+/*mobile nav*/
+
+.burger-btn {
+    position: fixed;
+    left: 20px;
+    z-index: 22;
+    display: none;
+    align-items: center;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.burger-btn span {
+    position: absolute;
+    content: "";
+    top: 9px;
+}
+
+.burger-btn span,
+.burger-btn:after,
+.burger-btn:before {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.burger-btn::after,
+.burger-btn::before {
+    content: "";
+    position: absolute;
+}
+
+.burger-btn::before {
+    top: 0;
+}
+
+.burger-btn::after {
+    bottom: 0;
+}
+
+
+/**/
+
+.menu-modal {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.menu-modal-block {
+    background-color: #2d303a;
+    position: fixed;
+    height: 100%;
+    width: 70%;
+    padding-top: 50px;
+    z-index: 9;
+}
+
+.mobile-menu-background {
+    content: "";
+    background-color: #53596f;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+}
+
+.display {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.nav-mobile li {
+    list-style-type: none;
+    margin-bottom: 2.7rem;
+}
+
+.nav-mobile li a {
+    font-family: lato;
+    font-size: 3.2rem;
+    color: #fff;
+}
+
+.nav-mobile li a:hover {
+    font-family: lato;
+    font-size: 3.2rem;
+    cursor: pointer;
+    transition: .2s;
+    text-decoration: underline;
+    color: #f06c64;
+}
+
+.nav-mobile li a.active {
+    color: #f06c64;
+}
+
+.nav-mobile {
+    display: inline-block;
+    margin-top: 18rem;
 }
 
 
@@ -179,40 +290,40 @@ body {
 
 .iphone--vertical-shadow {
     position: absolute;
-    top: 52px;
+    top: -3px;
     left: 112px;
 }
 
 .iphone--horizontal-shadow {
     position: absolute;
-    top: 174px;
+    top: 119px;
     right: 111px;
 }
 
 .iphone--vertical {
     position: absolute;
-    top: 53px;
+    top: -3px;
     left: 111px;
     cursor: pointer;
 }
 
 .iphone--horizontal {
     position: absolute;
-    top: 174px;
+    top: 117px;
     right: 137px;
     cursor: pointer;
 }
 
 .iphone--vertical-display {
     position: absolute;
-    top: 118px;
+    top: 59px;
     left: 125.2px;
     cursor: pointer;
 }
 
 .iphone--horizontal-display {
     position: absolute;
-    top: 188px;
+    top: 131px;
     right: 202px;
     cursor: pointer;
 }
@@ -326,25 +437,6 @@ div.next {
     }
 }
 
-@media (max-width: 960px) {
-    .description {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 640px) {
-    .arrow {
-        display: none;
-    }
-    .project-name {
-        display: none;
-    }
-    .description {
-        border: 1px solid red;
-    }
-}
-
 
 /*slider animated*/
 
@@ -365,12 +457,18 @@ div.next {
     overflow: hidden;
 }
 
-.slide {
+
+/* .slide {
     position: relative;
     width: 100%;
     height: 100%;
     transition: all 1s ease-in 0.1s;
     left: 0;
+} */
+
+.slide {
+    position: relative;
+    display: flex;
 }
 
 .slideimg div {
@@ -412,12 +510,12 @@ div.next {
 }
 
 .services {
+    padding: 0 4rem;
     background-color: #f2f2f2;
 }
 
 .ourServices {
-    padding: 40px;
-    padding-top: 58px;
+    padding-top: 61px;
     padding-bottom: 25px;
 }
 
@@ -436,7 +534,6 @@ div.next {
 
 .servicesList {
     display: flex;
-    padding: 4px 37px;
     padding-bottom: 30px;
     color: #767e9e;
     flex-wrap: wrap;
@@ -447,13 +544,9 @@ div.next {
     overflow: hidden;
 }
 
-.fix {
-    margin-left: 16px;
-}
-
 .servicesList div {
     display: flex;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
     padding: 0 5px;
     flex: 1 300px;
 }
@@ -502,7 +595,7 @@ div.servicesList div img {
 }
 
 .project-title {
-    padding-top: 60px;
+    padding-top: 65px;
 }
 
 .project-title h1 {
@@ -510,13 +603,13 @@ div.servicesList div img {
 }
 
 .project-title p {
-    font-size: 15px;
-    margin-top: 25px;
+    font-size: 17px;
+    margin-top: 18px;
 }
 
 .tags ul {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-inline-start: 0;
 }
 
@@ -534,7 +627,7 @@ div.servicesList div img {
     border: 1px solid #c5c5c5;
     transition: .2s;
     opacity: 1;
-    cursor: ;
+    cursor: pointer;
 }
 
 .tags li.active {
@@ -543,27 +636,46 @@ div.servicesList div img {
 }
 
 .projects {
-    height: 660px;
-    padding: 7px 40px;
+    padding: 0px 30px;
+    padding-bottom: 58px;
     border-bottom: 6px solid #323746;
     background-color: #2d303a;
 }
 
 .projectslist {
     display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
+    /* margin-top: auto;
+    margin-bottom: auto; */
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-height: 620px;
+    /* justify-content: space-between;
+    max-height: 620px; */
+}
+
+.projects {
+    overflow: hidden;
 }
 
 .projectimg {
-    overflow: hidden;
+    margin: 8px;
+    flex: 1 0 20%;
+    /* overflow: hidden;
     width: 220px;
     height: 187px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
 }
+
+
+/* .projectimg::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+} */
+
+
+/* .projectimg img {
+    height: 84%;
+    width: 100%;
+} */
 
 .about-us {
     margin: 0 40px;
@@ -582,7 +694,7 @@ div.servicesList div img {
     font-family: lato, sans-serif;
     font-size: 17px;
     line-height: 32px;
-    margin-bottom: 43px;
+    margin-bottom: 39px;
 }
 
 .portrets {
@@ -602,7 +714,9 @@ div.servicesList div img {
 }
 
 .portretbox {
-    width: 300px;
+    overflow: hodden;
+    flex: 1 0 5%;
+    max-width: 302px;
 }
 
 .portretbox h3 {
@@ -611,7 +725,7 @@ div.servicesList div img {
 }
 
 .portretbox p {
-    font-size: 10px;
+    font-size: 1.2rem;
     line-height: 22px;
     margin-top: 7px;
     margin-bottom: 22px;
@@ -656,6 +770,7 @@ div.servicesList div img {
 
 .top {
     padding-top: 59px;
+    padding-bottom: 41px;
 }
 
 .top h2 {
@@ -665,6 +780,7 @@ div.servicesList div img {
 }
 
 .top p {
+    font-size: 17px;
     line-height: 29px;
 }
 
@@ -681,8 +797,7 @@ div.servicesList div img {
 
 .form {
     display: flex;
-    margin-top: 47px;
-    margin-bottom: 49px;
+    margin-bottom: 14px;
     justify-content: space-between;
 }
 
@@ -690,7 +805,7 @@ input,
 textarea {
     font-size: 12px;
     line-height: 22px;
-    width: 619px;
+    width: 618px;
     margin-bottom: 13px;
     border-style: none;
     border-radius: 5px;
@@ -752,7 +867,7 @@ textarea:hover {
 }
 
 .contact p {
-    font-size: 10px;
+    font-size: 1.2rem;
     line-height: 22px;
     margin-top: 11px;
 }
@@ -788,6 +903,11 @@ textarea:hover {
     margin-bottom: 15px;
 }
 
+.social {
+    margin-right: -7px;
+    margin-top: -5px;
+}
+
 ul.socialbtn {
     margin: 0;
     padding-inline-start: 0;
@@ -805,7 +925,7 @@ ul.socialbtn {
 
 .bottom h4 {
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 6px;
     margin-left: 4px;
 }
 
@@ -879,4 +999,246 @@ table {
 
 .selected {
     background: red;
+}
+
+
+/*responsive*/
+
+@media (max-width: 1019px) {
+    .servicesList div {
+        margin-bottom: 28px;
+    }
+    .ourServices {
+        padding-top: 42px;
+    }
+    .home {
+        height: 450px;
+    }
+    .item,
+    .item.blue {
+        height: 450px;
+    }
+    .portretbox p {
+        max-height: 65px;
+        overflow: hidden;
+    }
+    .portret-image img {
+        width: 100%;
+    }
+    .portretbox {
+        margin: 10px;
+    }
+    .projectimg {
+        flex: 1 0 25%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .tags {
+        margin-top: 46px;
+    }
+    .about-us {
+        margin-top: 59px;
+    }
+    .container {
+        margin-bottom: 30px;
+    }
+    .description {
+        transform: scale(0.7681);
+    }
+    .iphone--vertical-shadow {
+        position: absolute;
+        top: 52px;
+        left: -4px;
+    }
+    .iphone--horizontal-shadow {
+        position: absolute;
+        top: 174px;
+        right: -25px;
+    }
+    .iphone--vertical {
+        position: absolute;
+        top: 53px;
+        left: -4px;
+        cursor: pointer;
+    }
+    .iphone--horizontal {
+        position: absolute;
+        top: 174px;
+        right: -1px;
+        cursor: pointer;
+    }
+    .iphone--vertical-display {
+        position: absolute;
+        top: 118px;
+        left: 10.2px;
+        cursor: pointer;
+    }
+    .iphone--horizontal-display {
+        position: absolute;
+        top: 188px;
+        right: 62px;
+        cursor: pointer;
+    }
+    .iphone--left {
+        position: relative;
+        margin-top: 63px;
+        left: 26px;
+    }
+    .iphone--center {
+        position: relative;
+        margin-top: -32px;
+        z-index: 2;
+    }
+    .iphone--right {
+        position: relative;
+        margin-top: 63px;
+        right: 26px;
+        z-index: 1;
+    }
+    input,
+    textarea {
+        width: 440px;
+        margin-right: 29px;
+    }
+}
+
+@media (max-width: 767px) {
+    .projectimg img {
+        width: 100%;
+    }
+    .servicesBot {
+        left: -8vw;
+        width: 100vw;
+    }
+    .iphone--vertical-shadow {
+        position: absolute;
+        top: 52px;
+        left: -104px;
+    }
+    .iphone--horizontal-shadow {
+        position: absolute;
+        top: 174px;
+        right: -185px;
+    }
+    .iphone--vertical {
+        position: absolute;
+        top: 53px;
+        left: -104px;
+        cursor: pointer;
+    }
+    .iphone--horizontal {
+        position: absolute;
+        top: 174px;
+        right: -161px;
+        cursor: pointer;
+    }
+    .iphone--vertical-display {
+        position: absolute;
+        top: 118px;
+        left: -90px;
+        cursor: pointer;
+    }
+    .iphone--horizontal-display {
+        position: absolute;
+        top: 188px;
+        right: -100px;
+        cursor: pointer;
+    }
+    .iphone--left {
+        position: relative;
+        margin-top: 63px;
+        left: 26px;
+    }
+    .iphone--center {
+        position: relative;
+        margin-top: -32px;
+        z-index: 2;
+    }
+    .iphone--right {
+        position: relative;
+        margin-top: 63px;
+        right: 26px;
+        z-index: 1;
+    }
+    .description img {
+        transform: scale(0.7);
+    }
+    .projectimg {
+        flex: 1 0 32%;
+    }
+    .arrow {
+        display: none;
+    }
+    .project-name {
+        display: none;
+    }
+    .burger-btn {
+        display: block;
+        transition: 0.3s all ease;
+    }
+    .nav {
+        display: none;
+    }
+    .header {
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        margin: auto;
+    }
+    .portretbox {
+        flex: 1 0 100%;
+        margin-bottom: 10%;
+    }
+    /*margin.padding*/
+    .projects,
+    .services,
+    .footerbox,
+    .bottom {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .container,
+    .about-us {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+    }
+    .form {
+        flex-direction: column;
+    }
+    .input,
+    .textarea {
+        width: 100%;
+    }
+    .projectslist::nth-child(n+9) {
+        display: none;
+    }
+}
+
+@media (max-width: 374px) {
+    .header {
+        height: 70px;
+    }
+    .home {
+        height: 220px;
+    }
+    .item,
+    .item.blue {
+        height: 220px;
+    }
+    .projectimg {
+        flex: 1 0 35%;
+        margin: 5px;
+    }
+    .description {
+        top: -40px;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+    .description {
+        transform: scale(0.5);
+    }
 }

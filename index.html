@@ -10,10 +10,30 @@
 
 <body>
     <div id="home" class="header">
+        <div class="burger-btn" id="burger-btn">
+            <span></span>
+        </div>
+
         <div class="logo">
             <h1>SINGOLO</h1>
             <div class="logoElement">
                 <span>*</span>
+            </div>
+        </div>
+        <div id="menu-modal" class="menu-modal">
+            <div class="menu-modal-block">
+                <nav class="nav-mobile">
+                    <ul id="header-menu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#aboutus">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu-background">
+
             </div>
         </div>
         <div class="nav">
@@ -26,6 +46,10 @@
             </ul>
         </div>
     </div>
+
+
+
+
     <div id="home" class="home">
         <div class="carusel">
             <div class="item-comtainer">
@@ -73,14 +97,14 @@
                     <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                 </div>
             </div>
-            <div class="servicesList-element fix2">
+            <div class="servicesList-element ">
                 <img src="assets/img/bulb.png" alt="bulb">
                 <div class="servicedescription">
                     <h3>Inovative Ideas</h3>
                     <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                 </div>
             </div>
-            <div class="servicesList-element fix">
+            <div class="servicesList-element ">
                 <img src="assets/img/heart.png" alt="heart">
                 <div class="servicedescription">
                     <h3>Love Is The Answer</h3>
@@ -94,14 +118,14 @@
                     <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                 </div>
             </div>
-            <div class="servicesList-element fix2">
+            <div class="servicesList-element ">
                 <img src="assets/img/blubble.png" alt="blubble">
                 <div class="servicedescription">
                     <h3>24 / 7 Support</h3>
                     <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
                 </div>
             </div>
-            <div class="servicesList-element fix">
+            <div class="servicesList-element ">
                 <img src="assets/img/star.png" alt="staer">
                 <div class="servicedescription">
                     <h3>Feel Like A Star</h3>
@@ -133,40 +157,40 @@
         <div class="projects">
             <div id="projectslist" class="projectslist">
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project1.jpg" alt="Projects1">
+                    <img src="assets/img/projects/project1.png" alt="Projects1">
                 </div>
                 <div id="webdesign" class="projectimg">
-                    <img src="assets/img/projects/project2.jpg" alt="Projects2">
+                    <img src="assets/img/projects/project2.png" alt="Projects2">
                 </div>
                 <div id="webdesign" class="projectimg">
-                    <img src="assets/img/projects/project3.jpg" alt="Projects3">
+                    <img src="assets/img/projects/project3.png" alt="Projects3">
                 </div>
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project4.jpg" alt="Projects4">
+                    <img src="assets/img/projects/project4.png" alt="Projects4">
                 </div>
                 <div id="graphicdesign" class="projectimg">
-                    <img src="assets/img/projects/project5.jpg" alt="Projects5">
+                    <img src="assets/img/projects/project5.png" alt="Projects5">
                 </div>
                 <div id="graphicdesign" class="projectimg">
-                    <img src="assets/img/projects/project6.jpg" alt="Projects6">
+                    <img src="assets/img/projects/project6.png" alt="Projects6">
                 </div>
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project7.jpg" alt="Projects7">
+                    <img src="assets/img/projects/project7.png" alt="Projects7">
                 </div>
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project8.jpg" alt="Projects8">
+                    <img src="assets/img/projects/project8.png" alt="Projects8">
                 </div>
                 <div id="graphicdesign" class="projectimg">
-                    <img src="assets/img/projects/project9.jpg" alt="Projects9">
+                    <img src="assets/img/projects/project9.png" alt="Projects9">
                 </div>
                 <div id="graphicdesign" class="projectimg">
-                    <img src="assets/img/projects/project10.jpg" alt="Projects10">
+                    <img src="assets/img/projects/project10.png" alt="Projects10">
                 </div>
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project11.jpg" alt="Projects11">
+                    <img src="assets/img/projects/project11.png" alt="Projects11">
                 </div>
                 <div id="artwork" class="projectimg">
-                    <img src="assets/img/projects/project12.jpg" alt="Projects12">
+                    <img src="assets/img/projects/project12.png" alt="Projects12">
                 </div>
 
             </div>
@@ -180,7 +204,10 @@
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="portrets">
             <div class="portretbox">
-                <img src="assets/img/portrets/portret1.jpg" alt="portrer1">
+                <div class="portret-image">
+                    <img src="assets/img/portrets/portret1.jpg" alt="portrer1">
+                </div>
+
                 <h3 class="name">Adam Jensen</h3>
                 <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                 <ul class="socialbtn">
@@ -199,7 +226,9 @@
                 </ul>
             </div>
             <div class="portretbox">
-                <img src="assets/img/portrets/portret2.jpg" alt="portrer2">
+                <div class="portret-image">
+                    <img src="assets/img/portrets/portret2.jpg" alt="portrer2">
+                </div>
                 <h3>Desmond Miles</h3>
                 <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                 <ul class="socialbtn">
@@ -218,7 +247,9 @@
                 </ul>
             </div>
             <div class="portretbox">
-                <img src="assets/img/portrets/portret3.jpg" alt="portrer3">
+                <div class="portret-image">
+                    <img src="assets/img/portrets/portret3.jpg" alt="portrer3">
+                </div>
                 <h3>Scolara Visari</h3>
                 <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                 <ul class="socialbtn">

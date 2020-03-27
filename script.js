@@ -9,6 +9,19 @@ MENU.addEventListener('click', (event) => {
 
 });
 
+/*mob menue */
+
+const BURGERBTN = document.getElementById('burger-btn');
+BURGERBTN.addEventListener('click', (event) => {
+    if (document.getElementById('menu-modal').classList.contains('display')) {
+        document.getElementById('menu-modal').classList.remove('display');
+        document.getElementById('burger-btn').classList.remove('rotate');
+    } else {
+        document.getElementById('menu-modal').classList.add('display');
+        document.getElementById('burger-btn').classList.add('rotate');
+    }
+});
+
 /*slider import*/
 let items = document.querySelectorAll('.item');
 let currentItem = 0;
@@ -125,8 +138,8 @@ TAGS.addEventListener('click', (event) => {
 
 PROJECTSLIST.addEventListener('click', (event) => {
 
-    PROJECTSLIST.querySelectorAll('img').forEach(element => element.parentNode.classList.remove('border'));
-    event.target.parentNode.classList.add('border');
+    PROJECTSLIST.querySelectorAll('img').forEach(element => element.classList.remove('border'));
+    event.target.classList.add('border');
 });
 
 /*tag selected*/

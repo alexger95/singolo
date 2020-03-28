@@ -608,12 +608,14 @@ div.servicesList div img {
 .tags ul {
     display: flex;
     margin-top: 10px;
+    flex-wrap: wrap;
     padding-inline-start: 0;
 }
 
 .tags li {
     font-size: 11px;
     margin-right: 23px;
+    margin-bottom: 10px;
     padding: 3px;
     list-style: none;
     border: 1px solid #767e9e;
@@ -793,7 +795,6 @@ div.servicesList div img {
 
 .form {
     display: flex;
-    margin-bottom: 14px;
     justify-content: space-between;
 }
 
@@ -843,14 +844,22 @@ textarea:hover {
 
 .form-button {
     font-family: "Lato";
-    font-size: 16px;
-    font-weight: 400;
     padding: 7px 14px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    color: #f48c8f;
     background-color: #d6564f;
+    width: 136px;
+    height: 38px;
+    left: 39px;
+    top: 3540px;
+    background: #FBC65F;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #886A30;
 }
 
 .form-button:hover {
@@ -910,8 +919,8 @@ ul.socialbtn {
 }
 
 .bottom {
+    color: #666d89;
     display: flex;
-    margin: 0 -40px;
     padding: 24px 40px;
     padding-top: 27px;
     border-top: 6px solid #ea676b;
@@ -1001,6 +1010,15 @@ table {
 /*responsive*/
 
 @media (max-width: 1019px) {
+    .social {
+        margin: 0 auto;
+    }
+    form {
+        margin-bottom: 15px;
+    }
+    .bottom h4 {
+        display: none;
+    }
     .servicesList div {
         margin-bottom: 28px;
     }
@@ -1031,7 +1049,7 @@ table {
         flex: 1 0 25%;
     }
     .tags {
-        margin-top: 46px;
+        margin-top: 26px;
     }
     .about-us {
         margin-top: 59px;
@@ -1112,6 +1130,12 @@ table {
 }
 
 @media (max-width: 767px) {
+    .ourServices {
+        padding-top: 26px;
+    }
+    .logo {
+        font-size: 10px;
+    }
     .projectimg img {
         width: 100%;
     }
@@ -1121,6 +1145,9 @@ table {
     }
     .projectimg {
         flex: 1 0 32%;
+    }
+    .projectimg:nth-child(n+9) {
+        display: none;
     }
     .project-name {
         display: none;
@@ -1133,7 +1160,7 @@ table {
         display: none;
     }
     .header {
-        height: 55px;
+        height: 70px;
         display: flex;
         justify-content: space-between;
     }
